@@ -41,7 +41,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
                                 pet.setPetType(petTypeService.save(pet.getPetType()));
                             }
                     }else{
-                        throw new RuntimeException();
+                        throw new RuntimeException("Exception happened");
                     }
                     if(pet.getId() != null){
                         Pet savedPet = petService.save(pet);
