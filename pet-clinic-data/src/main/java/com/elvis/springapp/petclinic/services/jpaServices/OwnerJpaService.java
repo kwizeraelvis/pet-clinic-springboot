@@ -5,12 +5,14 @@ import com.elvis.springapp.petclinic.repositories.OwnerRepository;
 import com.elvis.springapp.petclinic.repositories.PetRepository;
 import com.elvis.springapp.petclinic.repositories.PetTypeRepository;
 import com.elvis.springapp.petclinic.services.OwnerService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
+@Profile("springdatajpa")
 public class OwnerJpaService implements OwnerService{
 
     private final OwnerRepository ownerRepository;

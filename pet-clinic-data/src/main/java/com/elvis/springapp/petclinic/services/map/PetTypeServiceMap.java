@@ -2,6 +2,7 @@ package com.elvis.springapp.petclinic.services.map;
 
 import com.elvis.springapp.petclinic.model.PetType;
 import com.elvis.springapp.petclinic.services.PetTypeService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
