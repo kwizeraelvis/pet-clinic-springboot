@@ -5,6 +5,7 @@ import com.elvis.springapp.petclinic.model.Pet;
 import com.elvis.springapp.petclinic.services.OwnerService;
 import com.elvis.springapp.petclinic.services.PetService;
 import com.elvis.springapp.petclinic.services.PetTypeService;
+import com.sun.istack.Nullable;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -70,6 +71,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByLastName(String LastName) {
-        return null;
+        return this.findall()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(LastName))
+                .findFirst()
+                .orElse(new Owner());
     }
 }
